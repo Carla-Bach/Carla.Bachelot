@@ -455,31 +455,121 @@ section {
 /*--------------------------------------------------------------
 # Akills
 --------------------------------------------------------------*/
-
-.practice {
-  display: grid;
-  grid-template-columns: 626px 626px;
-  grid-auto-rows: 280px;
-  gap: 40px;
-  margin-bottom: 40px;
+.skills .icon-box {
+  text-align: center;
+  padding: 70px 20px 80px 20px;
+  transition: all ease-in-out 0.3s;
+  background: #fff;
+  box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.05);
 }
 
-.practice .img-fluid {
-  border-radius: 10px;
-}
-
-.image-container {
+.skills .icon-box .icon {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: ease-in-out 0.3s;
   position: relative;
 }
 
-.image-text {
+/* .skills .icon-box .icon i {
+  font-size: 36px;
+  transition: 0.5s;
+  position: relative;
+} */
+
+.skills .icon-box .icon svg {
   position: absolute;
-  top: 60%;
-  left: 35%;
-  transform: translate(-50%, -50%);
-  font-weight: bold;
+  top: 0;
+  left: 0;
 }
 
+.skills .icon-box .icon img {
+  width: 100px;
+  height: 100px;
+}
+
+.skills .icon-box .icon svg path {
+  transition: 0.5s;
+  fill: #f5f5f5;
+}
+
+.skills .icon-box h3 {
+  font-weight: 600;
+  margin: 10px 0 15px 0;
+  font-size: 22px;
+}
+
+/* .skills .icon-box h4 a {
+  color: #45505b;
+  transition: ease-in-out 0.3s;
+} */
+
+.skills .icon-box ul {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.skills .icon-box p {
+  color: #242424;
+}
+
+.skills .icon-box:hover {
+  border-color: #fff;
+  box-shadow: 0px 0 35px 0 rgba(0, 0, 0, 0.08);
+}
+
+.skills .iconbox-blue i {
+  color: #47aeff;
+}
+
+.skills .iconbox-blue:hover .icon i {
+  color: #fff;
+}
+
+.skills .iconbox-blue:hover .icon path {
+  fill: #47aeff;
+}
+
+.skills .iconbox-orange i {
+  color: #ffa76e;
+}
+
+.skills .iconbox-orange:hover .icon i {
+  color: #fff;
+}
+
+.skills .iconbox-orange:hover .icon path {
+  fill: #ffa76e;
+}
+
+.skills .iconbox-yellow i {
+  color: #ffbb2c;
+}
+
+.skills .iconbox-yellow:hover .icon i {
+  color: #fff;
+}
+
+.skills .iconbox-yellow:hover .icon path {
+  fill: #ffbb2c;
+}
+
+.skills .iconbox-teal i {
+  color: #11dbcf;
+}
+
+.skills .iconbox-teal:hover .icon i {
+  color: #fff;
+}
+
+.skills .iconbox-teal:hover .icon path {
+  fill: #11dbcf;
+}
 
 
 /*--------------------------------------------------------------
@@ -622,17 +712,17 @@ section {
   color: #fff;
   font-size: 28px;
   text-align: center;
-  background: rgba(20, 157, 221, 0.75);
+  background: #242424;
   transition: 0.3s;
   width: 50%;
 }
 
 .portfolio .portfolio-wrap .portfolio-links a:hover {
-  background: rgba(20, 157, 221, 0.95);
+  background: #B3AD97;
 }
 
 .portfolio .portfolio-wrap .portfolio-links a+a {
-  border-left: 1px solid #37b3ed;
+  border-left: 1px solid #fff;
 }
 
 .portfolio .portfolio-wrap:hover::before {
@@ -669,15 +759,16 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #149ddd;
+  border: 1px solid #B3AD97;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #149ddd;
+  background-color: #B3AD97;
 }
 
 .portfolio-details .portfolio-info {
   padding: 30px;
+  margin-bottom: 175px;
   box-shadow: 0px 0 30px rgba(5, 13, 24, 0.08);
 }
 
@@ -716,7 +807,7 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
-.services .icon-box {
+/* .services .icon-box {
   margin-bottom: 20px;
 }
 
@@ -766,7 +857,7 @@ section {
   margin-left: 80px;
   line-height: 24px;
   font-size: 14px;
-}
+} */
 
 /*--------------------------------------------------------------
 # Contact
@@ -784,11 +875,11 @@ section {
 
 .contact .info i {
   font-size: 20px;
-  color: #149ddd;
+  color: #B3AD97;
   float: left;
   width: 44px;
   height: 44px;
-  background: #dff3fc;
+  background: #242424;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -835,18 +926,18 @@ section {
 }
 
 .contact .info .social-links a:hover {
-  background: #149ddd;
-  color: #fff;
+  background: #B3AD97;
+  color: #242424;
 }
 
 .contact .info .email:hover i,
 .contact .info .address:hover i,
 .contact .info .phone:hover i {
-  background: #149ddd;
-  color: #fff;
+  background: #B3AD97;
+  color: #242424;
 }
 
-.contact .php-email-form {
+/* .contact .php-email-form {
   width: 100%;
   padding: 30px;
   background: #fff;
@@ -940,7 +1031,7 @@ section {
 
 .contact .php-email-form button[type=submit]:hover {
   background: #37b3ed;
-}
+} */
 
 @keyframes animate-loading {
   0% {
